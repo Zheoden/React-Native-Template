@@ -1,5 +1,5 @@
 {
-  "name": "RNTemplate",
+  "name": "react-native-template",
   "version": "0.0.1",
   "private": true,
   "scripts": {
@@ -28,10 +28,23 @@
     "@types/react-test-renderer": "^16.9.2",
     "babel-jest": "^26.0.1",
     "eslint": "^7.0.0",
+    "husky": "^4.2.5",
     "jest": "^26.0.1",
+    "lint-staged": "^10.2.2",
     "metro-react-native-babel-preset": "^0.59.0",
     "react-native-typescript-transformer": "^1.2.13",
     "react-test-renderer": "16.11.0",
     "typescript": "^3.9.2"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{ts,tsx}": [
+      "prettier --loglevel silent --write",
+      "eslint --fix"
+    ]
   }
 }
