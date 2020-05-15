@@ -26,7 +26,7 @@ module.exports = {
     'class-methods-use-this': 'off',
     'global-require': 'off',
     'import/no-cycle': 'off',
-    'import/no-named-as-default': 'warn',
+    'import/no-named-as-default': 'off',
     'import/no-unresolved': 'off',
     'import/prefer-default-export': 'off',
     'no-async-promise-executor': 'off',
